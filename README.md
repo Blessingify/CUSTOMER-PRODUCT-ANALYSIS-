@@ -51,7 +51,12 @@ SET PRODUCT_ID = 101
 WHERE PRODUCT_ID = 1001
 
 ````
-
+the find the customer that spend more than the average total amount:
+````sql
+select *
+ from orders_info
+where total_amount > (select avg(total_amount)from orders_info)
+````
 
 
 
